@@ -48,7 +48,7 @@ PCA is a powerful tool for data analysis, dimensionality reduction, and feature 
 ![Image Alt Text](/photos_for_readme/PCA_Visualization_1_Heatmap.png) ![Image Alt Text](/photos_for_readme/Precision_Matrix.png)
 
 ### Looking at how different features as the Principal Component rely on others opened up my mind to see howdeeply intertwined these features really are. 
-![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) ![Image Alt Text]
+![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) 
 
 ## At this point, it was time to start testing. I was already excited. I used several models:
 
@@ -67,6 +67,11 @@ PCA is a powerful tool for data analysis, dimensionality reduction, and feature 
 ### 5. Hybrid Model (Decision Tree and MLP)
 - The **Hybrid Model** you used combines the results from a Decision Tree and an MLP. This approach can boost the recall score by leveraging the strengths of both models. The Decision Tree may excel in explaining individual decisions, while the MLP can capture more complex patterns.
 
-Each of these models has its own strengths and weaknesses, and testing multiple models is a good approach to find the most effective one for your fraud detection project.
+Each of these models has its own strengths and weaknesses, and testing multiple models to decide which ones I wanted to follow through with was my primary goal. 
 
+See Below:
+(Note that NN is our MLP model)
+![Image Alt Text](/photos_for_readme/confusion_matrix_Baseline.png) ![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png) 
+![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png) ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
+![Image Alt Text](/photos_for_readme/MLP_Matrtix.png) ![Image Alt Text](/photos_for_readme/Hybrid_Matrix.png) 
 
