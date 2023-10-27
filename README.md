@@ -40,3 +40,9 @@ PCA stands for "Principal Component Analysis." It is a technique used in the fie
 PCA is a powerful tool for data analysis, dimensionality reduction, and feature extraction, making it valuable in various fields, including machine learning and statistics. See how helpful it was in feature selection:
 
 ![Image Alt Text](/photos_for_readme/PCA_Visualization_1.png)
+
+## Seeing the above was a clear takeaway that the step feature in the data wasn't giving enough of a strong signal. 
+
+## To go more in depth:
+
+![Image Alt Text](/photos_for_readme/PCA_Visualization_1_Heatmap.png) ![Image Alt Text](/photos_for_readme/Precision_Matrix.png)
