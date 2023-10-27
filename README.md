@@ -72,7 +72,6 @@ Each of these models has its own strengths and weaknesses, and testing multiple 
 See Below:
 (Note that NN is our MLP model)
 
-![Image Alt Text](/photos_for_readme/confusion_matrix_Baseline.png) ![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png) 
-![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png) ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
+![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png) ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png) ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
 ![Image Alt Text](/photos_for_readme/MLP_Matrtix.png) ![Image Alt Text](/photos_for_readme/Hybrid_Matrix.png) 
 
