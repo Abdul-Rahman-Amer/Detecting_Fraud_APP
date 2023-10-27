@@ -75,3 +75,15 @@ See Below:
 ![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png) ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png) ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
 ![Image Alt Text](/photos_for_readme/MLP_Matrtix.png) ![Image Alt Text](/photos_for_readme/Hybrid_Matrix.png) 
 
+## From this Point I was interested in our hybrid model but later I would be impressed that after feature engineering, the MLP was out performing and it had a high recall score over 99.5%
+
+# When reviewing the final notebook "going in more depth" you will see that only arounf 10 "Fraud" instances Were categorized as "Not Fraud" With the rest being properly identified. I pickled the model and hosted it inside of a UI Built in flask. 
+
+## Here Takes User Inputs:
+![Image Alt Text](/photos_for_readme/APP_UI_2.png) 
+
+## Then I use Javascript and Ajax to handle the user request and serve it into the flask route /perdict which converts the input into a tensor that our pickled model can interpret and predict. 
+
+![Image Alt Text](/photos_for_readme/APP_UI.png) 
+
+# If you have any questions please reach out anytime. I am happy to share more! 
