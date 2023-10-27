@@ -41,8 +41,12 @@ PCA is a powerful tool for data analysis, dimensionality reduction, and feature 
 
 ![Image Alt Text](/photos_for_readme/PCA_Visualization_1.png)
 
-## Seeing the above was a clear takeaway that the step feature in the data wasn't giving enough of a strong signal. 
+## The above was a clear takeaway that the "step" feature in the data wasn't providing a strong signal. 
 
-## To go more in depth:
-
+## To go more in depth I created a Heatmap and Precision Matrix:
+### After seeing the below I was inspired to go a bit more in depth to analyze the feautres inner relationships and the results were fascinating! 
 ![Image Alt Text](/photos_for_readme/PCA_Visualization_1_Heatmap.png) ![Image Alt Text](/photos_for_readme/Precision_Matrix.png)
+
+### Looking at how different features as the Principal Component rely on others opened up my mind to see howdeeply intertwined these features really are. 
+![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) ![Image Alt Text](/photos_for_readme/Principal_Component_3.png) 
+
