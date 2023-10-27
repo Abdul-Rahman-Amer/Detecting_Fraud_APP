@@ -65,7 +65,7 @@ It was time to test various models for fraud detection. Several models were empl
 
 ### 3. Decision Tree
 - Decision Tree is a tree-based model that helps understand the decision-making process by creating a tree-like structure based on features.
- ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png)
+- ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png)
 
 ### 4. Multi-Layer Perceptron (MLP)
 - MLP is a neural network capable of capturing complex patterns and non-linear decision boundaries, well-suited for fraud detection.
