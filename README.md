@@ -92,7 +92,7 @@ The Flask application offers a user-friendly interface where users can input dat
 
 JavaScript and Ajax are used to handle user requests, serving them to the Flask route `/predict`. The input is converted into a tensor for prediction by the pickled model.
 
-![Modal Prediction](/photos_for_readme/Modal_Prediction.png)
+![Modal Prediction](/photos_for_readme/Modal_Prediciton.png)
 
 If you have any questions or need further information, feel free to reach out. We are happy to share more!
 
