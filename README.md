@@ -10,6 +10,7 @@ Deploying a Neural Network in a flask application to take in input and detect fr
 SMOTE stands for "Synthetic Minority Over-sampling Technique." It is a technique used in the field of machine learning and data analysis, particularly in the context of imbalanced datasets. An imbalanced dataset is one in which the number of instances (or data points) in one class is significantly lower than the number of instances in another class. This can lead to problems in machine learning models, as they may be biased towards the majority class and perform poorly on the minority class.
 
 **How SMOTE Works:**
+
 ![Image Alt Text](/photos_for_readme/smote.png)
 1. For each minority class instance, SMOTE selects *k* nearest neighbors from the same class as seen above 👆 
 
