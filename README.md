@@ -57,20 +57,24 @@ It was time to test various models for fraud detection. Several models were empl
 
 ### 1. Bayesian Neural Network (BNN)
 - BNN extends traditional neural networks with probabilistic modeling, providing probability distributions over predictions. It quantifies uncertainty, essential in fraud detection.
+- ![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png)
 
-### 2. Logistic Regression
+### 2. Logistic Regression (In NN)
 - Logistic Regression is a classic model for binary classification. It models the probability of a binary outcome based on input features, providing interpretable coefficients.
+-  ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
 
 ### 3. Decision Tree
 - Decision Tree is a tree-based model that helps understand the decision-making process by creating a tree-like structure based on features.
+ ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png)
 
 ### 4. Multi-Layer Perceptron (MLP)
 - MLP is a neural network capable of capturing complex patterns and non-linear decision boundaries, well-suited for fraud detection.
+![Image Alt Text](/photos_for_readme/MLP_Matrtix.png)
 
 ### 5. Hybrid Model (Decision Tree and MLP)
 - The Hybrid Model combines the strengths of Decision Tree and MLP, boosting recall scores.
+![Image Alt Text](/photos_for_readme/Hybrid_Matrix.png) 
 
-![Model Matrices](/photos_for_readme/Model_Matrices.png)
 
 In-depth testing revealed the best model for the fraud detection task.
 
