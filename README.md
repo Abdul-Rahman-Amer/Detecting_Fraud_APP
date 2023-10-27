@@ -244,6 +244,8 @@ def predict():
 
         return jsonify(response)
 ```
+![App UI](/photos_for_readme/Modal_Prediciton.png)
+
 
 If you have any questions or need further information, feel free to reach out. We are happy to share more!
 
