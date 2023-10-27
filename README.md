@@ -91,8 +91,34 @@ The Flask application offers a user-friendly interface where users can input dat
 ### Model Prediction
 
 JavaScript and Ajax are used to handle user requests, serving them to the Flask route `/predict`. The input is converted into a tensor for prediction by the pickled model.
+```html
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent the form from submitting directly
+
+        // Collect form data
+        var formData = {
+            type: $('#type').val(),
+            amount: $('#amount').val(),
+            oldbalanceOrg: $('#oldbalanceOrg').val(),
+            newbalanceOrig: $('#newbalanceOrig').val(),
+            oldbalanceDest: $('#oldbalanceDest').val(),
+            newbalanceDest: $('#newbalanceDest').val()
+        };
+
+        // Make an AJAX request to the Flask route
+        $.post("/predict", formData, function(response) {
+            console.log('Response:', response);
+            // Update the content of the modal with the response message
+            $('#modalMessage').html('<p>' + response.message + '</p>');
+            $('#resultModal').modal('show');
+        });
+    }
+</script>
 
 ![Modal Prediction](/photos_for_readme/Modal_Prediciton.png)
+```
 
 If you have any questions or need further information, feel free to reach out. We are happy to share more!
 
