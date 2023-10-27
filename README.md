@@ -48,5 +48,25 @@ PCA is a powerful tool for data analysis, dimensionality reduction, and feature 
 ![Image Alt Text](/photos_for_readme/PCA_Visualization_1_Heatmap.png) ![Image Alt Text](/photos_for_readme/Precision_Matrix.png)
 
 ### Looking at how different features as the Principal Component rely on others opened up my mind to see howdeeply intertwined these features really are. 
-![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) ![Image Alt Text](/photos_for_readme/Principal_Component_3.png) 
+![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) ![Image Alt Text]
+
+## At this point, it was time to start testing. I was already excited. I used several models:
+
+### 1. Bayesian Neural Network
+- **Bayesian Neural Network (BNN)** is a type of neural network that extends traditional neural networks with probabilistic modeling. Unlike conventional neural networks that provide point estimates, BNNs provide probability distributions over their predictions. They are useful when you need to quantify uncertainty in your predictions. BNNs use Bayesian inference to update the model's beliefs as new data is observed.
+
+### 2. Logistic Regression
+- **Logistic Regression** is a classic statistical model used for binary classification tasks, such as fraud detection. It models the probability of a binary outcome (e.g., fraud or not fraud) based on input features. Logistic regression provides interpretable coefficients and is a good choice for understanding the importance of different features in your fraud detection model.
+
+### 3. Decision Tree
+- **Decision Tree** is a tree-based machine learning model that is often used for classification tasks. In the context of fraud detection, a decision tree can help you understand the decision-making process of the model, as it creates a tree-like structure where each node represents a feature and each leaf node represents a class label (fraud or not fraud).
+
+### 4. MLP (Multi-Layer Perceptron)
+- **Multi-Layer Perceptron (MLP)** is a type of neural network with multiple layers of interconnected nodes (neurons). It is a powerful model for capturing complex patterns in data. In fraud detection, MLP can learn intricate relationships between various features and is capable of modeling non-linear decision boundaries.
+
+### 5. Hybrid Model (Decision Tree and MLP)
+- The **Hybrid Model** you used combines the results from a Decision Tree and an MLP. This approach can boost the recall score by leveraging the strengths of both models. The Decision Tree may excel in explaining individual decisions, while the MLP can capture more complex patterns.
+
+Each of these models has its own strengths and weaknesses, and testing multiple models is a good approach to find the most effective one for your fraud detection project.
+
 
