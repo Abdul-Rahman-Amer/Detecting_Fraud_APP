@@ -84,6 +84,6 @@ See Below:
 
 ## Then I use Javascript and Ajax to handle the user request and serve it into the flask route /perdict which converts the input into a tensor that our pickled model can interpret and predict. 
 
-![Image Alt Text](/photos_for_readme/Modal_Prediction.png) 
+![Image Alt Text](/photos_for_readme/Modal_Prediciton.png) 
 
 # If you have any questions please reach out anytime. I am happy to share more! 
