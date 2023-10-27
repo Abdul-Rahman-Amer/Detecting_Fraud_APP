@@ -1,89 +1,94 @@
 # Detecting_Fraud_APP
-Deploying a Neural Network in a flask application to take in input and detect fraudulent activity. 
 
-## Step 1 - Understanding the data
-### Right from the start, there is a huge minority class in the data. The following led me to want to SMOTE.
+## Overview
+This project deploys a Neural Network in a Flask application to take user input and detect fraudulent activity. The process involves understanding the data, preprocessing, feature engineering, model testing, and creating a user-friendly UI.
 
-### SMOTE:
-**(Synthetic Minority Over-sampling Technique)**
+## Step 1 - Understanding the Data
+Right from the start, it's evident that there's a significant minority class in the data, which prompted the use of SMOTE.
 
-SMOTE stands for "Synthetic Minority Over-sampling Technique." It is a technique used in the field of machine learning and data analysis, particularly in the context of imbalanced datasets. An imbalanced dataset is one in which the number of instances (or data points) in one class is significantly lower than the number of instances in another class. This can lead to problems in machine learning models, as they may be biased towards the majority class and perform poorly on the minority class.
+### SMOTE (Synthetic Minority Over-sampling Technique)
 
-**How SMOTE Works:**
+SMOTE stands for "Synthetic Minority Over-sampling Technique." It is a technique used in machine learning and data analysis, particularly for imbalanced datasets. It addresses the issue where the number of instances in one class is significantly lower than in another, leading to challenges in model performance. 
 
-![Image Alt Text](/photos_for_readme/smote.png)
-1. For each minority class instance, SMOTE selects *k* nearest neighbors from the same class as seen above 👆 
+#### How SMOTE Works
+1. For each minority class instance, SMOTE selects *k* nearest neighbors from the same class.
+2. A random neighbor is selected from the *k* nearest neighbors, and a synthetic example is created by interpolating between the selected instance and the random neighbor.
+3. This process is repeated for a specified number of synthetic examples, effectively increasing the number of minority class instances in the dataset.
 
-2. It then selects a random neighbor from the *k* nearest neighbors and creates a synthetic example by interpolating between the selected instance and the randomly chosen neighbor. This interpolation is done in feature space, creating a new data point that lies along the line connecting the two selected instances.
+SMOTE helps balance the class distribution in the dataset, improving machine learning model performance.
 
-3. This process is repeated for a specified number of synthetic examples to be generated, effectively increasing the number of minority class instances in the dataset.
+![SMOTE](/photos_for_readme/smote.png)
 
-SMOTE helps balance the class distribution in the dataset, which can improve the performance of machine learning models, especially when dealing with tasks like classification where class imbalance is a common problem. By generating synthetic examples, SMOTE ensures that the minority class is adequately represented in the training data, leading to better model generalization and accuracy.
+### PCA (Principal Component Analysis)
 
-### PCA 
-** (Principal Component Analysis)**
+PCA, or Principal Component Analysis, is used for dimensionality reduction in high-dimensional datasets while preserving essential information.
 
-PCA stands for "Principal Component Analysis." It is a technique used in the field of data analysis and dimensionality reduction. PCA is particularly valuable for reducing the complexity of high-dimensional datasets while preserving the most important information.
+#### How PCA Works
+1. Data is centered by subtracting the mean from each feature, ensuring the first principal component passes through the data's center.
+2. A covariance matrix is constructed from the centered data, capturing feature relationships.
+3. Eigenvalues and eigenvectors of the covariance matrix are found, with eigenvalues representing variances along corresponding eigenvectors.
+4. Principal components are selected based on their eigenvalues, capturing the most critical data information.
+5. Data is projected onto selected principal components, reducing dimensionality while retaining valuable information.
 
-**How PCA Works:**
+![PCA Visualization](/photos_for_readme/PCA_Visualization_1.png)
 
-1. **Data Centering:** PCA begins by centering the data, which involves subtracting the mean from each feature. This step ensures that the first principal component (the direction of maximum variance) passes through the data's center.
+Feature selection with PCA proved useful, revealing insights into the importance of different features.
 
-2. **Covariance Matrix:** PCA then constructs the covariance matrix from the centered data. The elements of this matrix capture the relationships between different features.
+## In-Depth Analysis
 
-3. **Eigenvalue Decomposition:** The next step involves finding the eigenvalues and eigenvectors of the covariance matrix. These eigenvalues represent the variances of the data along the corresponding eigenvectors.
+To gain deeper insights, a heatmap and a precision matrix were generated.
 
-4. **Principal Component Selection:** Principal components are selected based on their associated eigenvalues, with higher eigenvalues indicating more significant variance. These components capture the most critical information in the data.
+### Heatmap and Precision Matrix
+The heatmap analysis provided a detailed view of feature relationships.
 
-5. **Data Projection:** Finally, data is projected onto the selected principal components, reducing the dimensionality while retaining as much information as possible.
+![Heatmap](/photos_for_readme/PCA_Visualization_1_Heatmap.png)
+![Precision Matrix](/photos_for_readme/Precision_Matrix.png)
 
-PCA is a powerful tool for data analysis, dimensionality reduction, and feature extraction, making it valuable in various fields, including machine learning and statistics. See how helpful it was in feature selection:
+### Principal Components
 
-![Image Alt Text](/photos_for_readme/PCA_Visualization_1.png)
+Principal components revealed how different components gathered signals from various features.
 
-## The above was a clear takeaway that the "step" feature in the data wasn't providing a strong signal. 
+![Principal Component 1](/photos_for_readme/Princiapl_component.png)
+![Principal Component 2](/photos_for_readme/Principal_Component_2.png)
 
-## To go more in depth I created a Heatmap and Precision Matrix:
-### After seeing the below I was inspired to go a bit more in depth to analyze the feautres inner relationships and the results were fascinating! 
-![Image Alt Text](/photos_for_readme/PCA_Visualization_1_Heatmap.png) ![Image Alt Text](/photos_for_readme/Precision_Matrix.png)
+## Model Testing
 
-### Looking at how different features as the Principal Component rely on others opened up my mind to see howdeeply intertwined these features really are. 
-![Image Alt Text](/photos_for_readme/Princiapl_component.png) ![Image Alt Text](/photos_for_readme/Principal_Component_2.png) 
+It was time to test various models for fraud detection. Several models were employed, each with its strengths and weaknesses.
 
-## At this point, it was time to start testing. I was already excited. I used several models:
-
-### 1. Bayesian Neural Network
-- **Bayesian Neural Network (BNN)** is a type of neural network that extends traditional neural networks with probabilistic modeling. Unlike conventional neural networks that provide point estimates, BNNs provide probability distributions over their predictions. They are useful when you need to quantify uncertainty in your predictions. BNNs use Bayesian inference to update the model's beliefs as new data is observed.
+### 1. Bayesian Neural Network (BNN)
+- BNN extends traditional neural networks with probabilistic modeling, providing probability distributions over predictions. It quantifies uncertainty, essential in fraud detection.
 
 ### 2. Logistic Regression
-- **Logistic Regression** is a classic statistical model used for binary classification tasks, such as fraud detection. It models the probability of a binary outcome (e.g., fraud or not fraud) based on input features. Logistic regression provides interpretable coefficients and is a good choice for understanding the importance of different features in your fraud detection model.
+- Logistic Regression is a classic model for binary classification. It models the probability of a binary outcome based on input features, providing interpretable coefficients.
 
 ### 3. Decision Tree
-- **Decision Tree** is a tree-based machine learning model that is often used for classification tasks. In the context of fraud detection, a decision tree can help you understand the decision-making process of the model, as it creates a tree-like structure where each node represents a feature and each leaf node represents a class label (fraud or not fraud).
+- Decision Tree is a tree-based model that helps understand the decision-making process by creating a tree-like structure based on features.
 
-### 4. MLP (Multi-Layer Perceptron)
-- **Multi-Layer Perceptron (MLP)** is a type of neural network with multiple layers of interconnected nodes (neurons). It is a powerful model for capturing complex patterns in data. In fraud detection, MLP can learn intricate relationships between various features and is capable of modeling non-linear decision boundaries.
+### 4. Multi-Layer Perceptron (MLP)
+- MLP is a neural network capable of capturing complex patterns and non-linear decision boundaries, well-suited for fraud detection.
 
 ### 5. Hybrid Model (Decision Tree and MLP)
-- The **Hybrid Model** you used combines the results from a Decision Tree and an MLP. This approach can boost the recall score by leveraging the strengths of both models. The Decision Tree may excel in explaining individual decisions, while the MLP can capture more complex patterns.
+- The Hybrid Model combines the strengths of Decision Tree and MLP, boosting recall scores.
 
-Each of these models has its own strengths and weaknesses, and testing multiple models to decide which ones I wanted to follow through with was my primary goal. 
+![Model Matrices](/photos_for_readme/Model_Matrices.png)
 
-See Below:
-(Note that NN is our MLP model)
+In-depth testing revealed the best model for the fraud detection task.
 
-![Image Alt Text](/photos_for_readme/Bayesian_MAtrix.png) ![Image Alt Text](/photos_for_readme/Decision_Tree_Matrix.png) ![Image Alt Text](/photos_for_readme/Logistic_Regression_Matrix.png) 
-![Image Alt Text](/photos_for_readme/MLP_Matrtix.png) ![Image Alt Text](/photos_for_readme/Hybrid_Matrix.png) 
+## Model Deployment
 
-### From this Point I was interested in our hybrid model but later I would be impressed that after feature engineering, the MLP was out performing and it had a high recall score over 99.5%
+The MLP model outperformed others, achieving a high recall score. This model was pickled and hosted in a Flask application.
 
-# When reviewing the final notebook "going in more depth" you will see that only arounf 10 "Fraud" instances Were categorized as "Not Fraud" With the rest being properly identified. I pickled the model and hosted it inside of a UI Built in flask. 
+### User Input
 
-## Here Takes User Inputs:
-![Image Alt Text](/photos_for_readme/APP_UI_2.png) 
+The Flask application offers a user-friendly interface where users can input data for fraud detection.
 
-## Then I use Javascript and Ajax to handle the user request and serve it into the flask route /perdict which converts the input into a tensor that our pickled model can interpret and predict. 
+![App UI](/photos_for_readme/APP_UI.png)
 
-![Image Alt Text](/photos_for_readme/Modal_Prediciton.png) 
+### Model Prediction
 
-# If you have any questions please reach out anytime. I am happy to share more! 
+JavaScript and Ajax are used to handle user requests, serving them to the Flask route `/predict`. The input is converted into a tensor for prediction by the pickled model.
+
+![Modal Prediction](/photos_for_readme/Modal_Prediction.png)
+
+If you have any questions or need further information, feel free to reach out. We are happy to share more!
+
